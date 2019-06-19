@@ -187,7 +187,7 @@ public class telalogin extends javax.swing.JFrame {
        if(email.equals(email)|| senhaLogin.equals(email)){
            tela2 te = new tela2();
            te.setVisible(true);
-           disable();
+           dispose();
            
        }
     }//GEN-LAST:event_btentrarActionPerformed
