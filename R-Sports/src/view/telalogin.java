@@ -41,7 +41,7 @@ public class telalogin extends javax.swing.JFrame {
 
         jLabel3.setText("jLabel3");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Área de acesso");
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -102,6 +102,11 @@ public class telalogin extends javax.swing.JFrame {
         btentrar.setBackground(new java.awt.Color(25, 187, 125));
         btentrar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btentrar.setText("Entrar");
+        btentrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btentrarActionPerformed(evt);
+            }
+        });
 
         btsair.setBackground(new java.awt.Color(204, 0, 0));
         btsair.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -173,6 +178,19 @@ public class telalogin extends javax.swing.JFrame {
     private void senhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_senhaActionPerformed
+
+    private void btentrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btentrarActionPerformed
+       String email = "admin";
+       String emailLogin = Email.getText();
+       String senhaLogin = senha.getText();
+       
+       if(email.equals(email)|| senhaLogin.equals(email)){
+           tela2 te = new tela2();
+           te.setVisible(true);
+           disable();
+           
+       }
+    }//GEN-LAST:event_btentrarActionPerformed
 
     /**
      * @param args the command line arguments
